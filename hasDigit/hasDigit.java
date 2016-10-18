@@ -14,16 +14,21 @@ public class hasDigit
 		String s = new String("abcd");
 		String s1 = new String("abc2d");
 		String s2 = new String("racecar");
+		String s3 = new String("");
 		System.out.println(hasDigit(s));
 		System.out.println(hasDigit(s1));
 		System.out.println(isPalindromeRecursive(s));
 		System.out.println(isPalindromeRecursive(s2));
+		System.out.println(isPalindromeRecursive(s3));
 		System.out.println(isPalindromeRecursiveNoCharAt(s));		
 		System.out.println(isPalindromeRecursiveNoCharAt(s2));
+		System.out.println(isPalindromeRecursiveNoCharAt(s3));
 		System.out.println(isPalindromeIterativeNoCharAt(s));
 		System.out.println(isPalindromeIterativeNoCharAt(s2));
+		System.out.println(isPalindromeIterativeNoCharAt(s3));
 		System.out.println(isPalindromeIterative(s));
 		System.out.println(isPalindromeIterative(s2));
+		System.out.println(isPalindromeIterative(s3));
 	}
 	
 	/** 
@@ -54,11 +59,11 @@ public class hasDigit
 
 	public static boolean isPalindromeRecursive(String s)
 	{
-		if(s.charAt(0) != s.charAt(s.length()-1))
-			return false;
-		
-		else if (s.length() == 0 || s.length() == 1)
+		if (s.length() == 0 || s.length() == 1)
 			return true;
+
+		else if(s.charAt(0) != s.charAt(s.length()-1))
+			return false;
 			
 		return isPalindromeRecursive(s.substring(1,s.length()-1));
 	
@@ -66,13 +71,13 @@ public class hasDigit
 
 	public static boolean isPalindromeRecursiveNoCharAt(String s)
 	{
-		if(!s.substring(0, 1).equals(s.substring(s.length()-1)))
-			return false;
-		
-		else if (s.length() == 0 || s.length() == 1)
+		if (s.length() == 0 || s.length() == 1)
 			return true;
+		
+		else if(!s.substring(0, 1).equals(s.substring(s.length()-1)))
+			return false;
 			
-		return isPalindromeRecursive(s.substring(1,s.length()-1));
+		return isPalindromeRecursiveNoCharAt(s.substring(1,s.length()-1));
 	
 	}
 
