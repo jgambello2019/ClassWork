@@ -87,6 +87,7 @@ public class TicTac
 			System.out.print("Player " + player + ", what spot would you like to fill? ");
 			String spot = kb.nextLine();
 			
+			
 			while(!(inRange(spot,boardSize, board)))
 			{
 				System.out.print("That is not a valid number on the board. Try again. ");
@@ -219,12 +220,11 @@ public class TicTac
 				if(board[i][j].equals(symbol))
 					counter ++;
 			}
+			if(counter == n)
+			return true;
 			counter = 0;
 		}
-		if(counter == n)
-			return true;
-		else
-			return false;
+		return false;
 	}
 	
 	/**
@@ -248,12 +248,11 @@ public class TicTac
 				if(board[j][i].equals(symbol))
 					counter ++;
 			}
+			if(counter == n)
+				return true;
 			counter = 0;
 		}
-		if(counter == n)
-			return true;
-		else
-			return false;
+		return false;
 	}
 	
 	/**
@@ -307,6 +306,8 @@ public class TicTac
 */
 	public static boolean inRange(String spot, int size, String [][] a)
 	{
+		if(spot.equals(""))
+			return false;
 		int s = (int) (spot.charAt(0));
 		if(s<48 || s>57)
 			return false;
@@ -380,6 +381,12 @@ public class TicTac
 	{
 		Scanner kb = new Scanner(System.in);
 		int index = 0;
+		if(userRows.length() < 1)
+		{
+			System.out.print("Please choose a number:");
+			String newUserRows = kb.nextLine();
+			return errorHandlingRows(newUserRows);
+		}
 		while(index < userRows.length())
 		{
 			int s = (int) (userRows.charAt(index));
