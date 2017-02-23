@@ -32,7 +32,7 @@ public class Vehicle
     //accessors
     /**
      * Accessor that returns the color of the Vehicle object
-     * @return String color
+     * @return the String's color
      */
     public String getColor()
     {
@@ -41,7 +41,7 @@ public class Vehicle
     
     /**
      * Accessor that returns the number of wheels on the vehicle object
-     * @return int Wheels
+     * @return the amount of Wheels (int)
      */
     public int getWheels()
     {
@@ -50,7 +50,7 @@ public class Vehicle
     //Modifiers
     /**
      * Modifier that will change the color to the input color
-     * @param String s
+     * @param the String s that will be the color
      */
     
     public void setColor(String s)
@@ -60,7 +60,7 @@ public class Vehicle
     
     /**
      * Modifier that sets the number of wheels
-     * @param int w
+     * @param the int w that will be the amount of wheels
      */
     public void setWheels(int w)
     {
@@ -69,8 +69,8 @@ public class Vehicle
     
     /**
      * Modifier that sets both the number of wheels and the color
-     * @param int w
-     * @param String s
+     * @param the int w that will be the amount of wheels
+     * @param the String s that will be the color
      */
     public void setDescription(int w, String s)
     {
@@ -81,8 +81,8 @@ public class Vehicle
     /**
      * Method that takes in an object of type Vehicle and returns if the instance is equal to the parameter
      * using the fields
-     * @param Vehicle v
-     * @return True of False
+     * @param the Vehicle v
+     * @return True or False
      */
     public boolean equals(Vehicle v)
     {
@@ -91,7 +91,7 @@ public class Vehicle
     
     /**
      * toString method that will print the number of wheels and the color
-     * @return String that says the number of wheels and the color
+     * @return a String that says the number of wheels and the color
      */
     public String toString()
     {
@@ -100,7 +100,7 @@ public class Vehicle
     
     /**
      * Method that returns a string of how much that vehicle will cost
-     * @return String
+     * @return a String that tells the cost
      */
     public String costRange()
     {

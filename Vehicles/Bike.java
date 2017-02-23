@@ -20,7 +20,7 @@ public class Bike extends Vehicle
     
     /**
      * Method that returns a string of the cost of this object
-     * @return String
+     * @return a String of the bike cost
      */
     public String costRange()
     {

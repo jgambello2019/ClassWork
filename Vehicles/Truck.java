@@ -21,9 +21,9 @@ public class Truck extends Vehicle
    /**
     * Constructor that takes in parameters of the number of wheels,
     * the color, and the number of doors. This method calls the super class Vehicle
-    * @param int w
-    * @param String s
-    * @param int d
+    * @param amount of wheels, w
+    * @param color, s
+    * @param amount of doors, d
     */
    public Truck(int w, String s, int d)
    {
@@ -33,7 +33,7 @@ public class Truck extends Vehicle
    
    /**
     * Accessor that returns the field doors
-    * @return int doors
+    * @return the amount of doors
     */
    public int getDoors()
    {
@@ -43,7 +43,7 @@ public class Truck extends Vehicle
    
    /**
     * Modifier that sets the number of doors to the parameter
-    * @param int d
+    * @param the int d that will be the amount of doors
     */
    public void setDoors(int d)
    {
@@ -53,9 +53,9 @@ public class Truck extends Vehicle
    /**
     * Modifier that sets all fields in the object by overriding the Vehicle setDescription and taking in three
     * parameters to change
-    * @param int w
-    * @param String s
-    * @param int d
+    * @param amount of wheels, w
+    * @param color, s
+    * @param amount of doors, d
     */
    public void setDescription(int w, String s, int d)
    {
@@ -66,7 +66,7 @@ public class Truck extends Vehicle
    /**
     * Method that checks if the instance is equal to the parameter by checking all of the fields and overriding
     * the vehicle class equals
-    * @param Truck t
+    * @param the Truck t
     * @return True or False
     */
    public boolean equals(Truck t)
@@ -77,7 +77,7 @@ public class Truck extends Vehicle
    
    /**
     * toString method that will return a string of all fields using the superclasses getWheels() and getColor()
-    * @return String
+    * @return a string telling the truck;s color, wheel amount, door amount
     */
    public String toString()
    {
@@ -86,7 +86,7 @@ public class Truck extends Vehicle
    
    /**
     * Method that returns a string of how much the vehicle will cost
-    * @return String
+    * @return a String telling the truck's cost
     */
    public String costRange()
    {

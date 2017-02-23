@@ -23,9 +23,9 @@ public class Car extends Vehicle
    
    /**
     * Constructor to create object car that takes in the parameters and calls Vehicle constructor
-    * @param int w
-    * @param String s
-    * @param int d
+    * @param amount of wheels, w
+    * @param color, s
+    * @param amount of doors, d
     */
  
    public Car(int w, String s, int d)
@@ -36,7 +36,7 @@ public class Car extends Vehicle
    
    /**
     * Accessor that return the number of doors in the car
-    * @return doors
+    * @return amount of doors
     */
    public int getDoors()
    {
@@ -45,7 +45,7 @@ public class Car extends Vehicle
    
    /**
     * Modifier that sets the number of doors
-    * @param int d
+    * @param the int d that will be the amount of doors
     */
    public void setDoors(int d)
    {
@@ -54,9 +54,9 @@ public class Car extends Vehicle
    
    /**
     * Modifier that changes the description of the car overloading the first setDescription in class Vehicle
-    * @param int w
-    * @param String s
-    * @param int d
+    * @param amount of wheels, w
+    * @param color, s
+    * @param amount of doors, d
     */
    public void setDescription(int w, String s, int d)
    {
@@ -66,7 +66,7 @@ public class Car extends Vehicle
    
    /**
     * Method that checks if the insance and the parameter have equal fields using Vehicle equals
-    * @param Car c
+    * @param a Car c
     * @return True or False
     */
    public boolean equals(Car c)
@@ -76,7 +76,7 @@ public class Car extends Vehicle
    
    /**
     * toString Method that will return a String of color wheel amount and door amount
-    * @return String
+    * @return a String telling the car's color, wheel amount, and door amount
     */
    public String toString()
    {
@@ -85,7 +85,7 @@ public class Car extends Vehicle
    
    /**
     * costRange method returns String of the cost of  the car
-    * @return String
+    * @return a String telling the cost
     */
    public String costRange()
    {
